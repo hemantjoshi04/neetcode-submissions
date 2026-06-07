@@ -1,0 +1,10 @@
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        Hashtable<Integer,Integer> map=new Hashtable<>();
+        for(int i=0;i<nums.length;i++){
+            int difference=target-nums[i];
+            if(map.containsKey(nums[i]))return new int[]{map.get(nums[i]),i};
+            else map.put(difference,i);
+        }return new int[]{};
+    }
+}
